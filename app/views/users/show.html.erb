@@ -1,0 +1,26 @@
+<title>User Profile</title> <!-- Use the provide with the dynamic titles -->
+
+<div class="container-fluid">
+  <div id="wrapper">
+    <h2 class="text-center"><strong><%= "Hello" + " " + @user.first_name + " " + @user.last_name + "!" %></strong></h2>
+<br>
+<h3>My Goals</h3>
+<br>
+
+
+<ul>
+  <% @todo_lists.each do |todo_list| %>
+      <h3><strong><%= link_to todo_list.title, todo_list_path(todo_list) %></strong></h3>
+      <br></br>
+      <%= link_to "Delete", todo_list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
+      <br></br>
+  <% end %>
+</ul>
+</br>
+</br>
+<%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-default" %>
+<%= link_to "Goals", todo_lists_path(@user), class: "btn btn-default" %>
+<%= link_to "Sign Out", signout_path, method: "delete", class: "btn btn-default"%>
+	</center>
+	</div>
+</div>
