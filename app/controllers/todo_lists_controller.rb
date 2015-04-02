@@ -5,7 +5,6 @@ class TodoListsController < ApplicationController
   # GET /todo_lists.json
   def index
     @todo_lists = current_user.todo_lists
-    # @todo_lists = TodoList.all
   end
 
   # GET /todo_lists/1
@@ -27,13 +26,13 @@ class TodoListsController < ApplicationController
   
   def create
     respond_to do |format|
-      if current_user.todo_lists.create(todo_list_params) 
-      # @todo_list.save
-        format.html { redirect_to @todo_list, notice: 'Todo list was successfully created.' }
+      new_todo_list = current_user.todo_lists.create(todo_list_params)
+      if new_todo_list
+        format.html { redirect_to new_todo_list, notice: 'Todo list was successfully created.' }
         format.json { render :show, status: :created, location: @todo_list }
       else
         format.html { render :new }
-        format.json { render json: @todo_list.errors, status: :unprocessable_entity }
+        format.json { render json: new_todo_list.errors, status: :unprocessable_entity }
      end
     end
   end
