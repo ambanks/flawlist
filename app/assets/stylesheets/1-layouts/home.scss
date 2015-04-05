@@ -12,7 +12,7 @@ body {
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'http://www.bet.com/topics/b/beyonce/_jcr_content/topicintro.topicintro.dimg/2011-topic-music-beyonce.jpg';
+  $hero-image: 'http://data2.whicdn.com/images/94700628/large.jpg';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
