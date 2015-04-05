@@ -66,16 +66,25 @@
 }
 
 .sliding-panel-button {
-  @include button(flat, black);
-  padding: 10px 16px;
+  @include button(black, white);
+  padding: 10px 16px 10px 10px;
   display: inline-block;
   cursor: pointer;
   position: relative;
   outline: none;
+  margin: 0 0 20px 0;
 
   img {
     height: 1.3em;
   }
+}
+
+.sign-in button {
+   @include button(flat, black);
+    padding: 0.7em 1em;
+    margin: 0 10px 0px 10px;
+    display: inline;
+    float: right;
 }
 
 // Based on code by Diego Eis
