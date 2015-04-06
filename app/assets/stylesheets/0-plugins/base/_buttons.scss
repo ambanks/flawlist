@@ -3,16 +3,16 @@ button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: black;
-  border-radius: $base-border-radius;
+  border-radius: 3px;
   border: none;
-  color: #fff;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 600;
-  line-height: .5;
-  padding: 0.75em 1em;
+  line-height: 1;
+  padding: 7px 18px;
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
@@ -20,8 +20,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: #a6a6a6;
-    color: #fff;
+    background-color: #f4c0d7;
   }
 
   &:disabled {
@@ -29,3 +28,29 @@ button {
     opacity: 0.5;
   }
 }
+/*.sign-in button {
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  padding: 0.7em 1em;
+  margin: 0 10px 0px 10px;
+  display: inline;
+  float: right;
+}*/

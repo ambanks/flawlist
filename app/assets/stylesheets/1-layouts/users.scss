@@ -23,6 +23,7 @@ body {
 
 .text-center {
   text-align: center;
+  font-size: 2em;
 }
 
 .goals-center {
@@ -35,9 +36,9 @@ body {
 
 #notice {
   text-align: center;
-  font-size: 0.6em;
-  color: $dark;
-  font-weight: 100;
+  font-size: 1em;
+  color: black;
+  font-weight: strong;
 }
 
 .container-fluid {
@@ -57,11 +58,11 @@ body {
 }
 
 .todo_list_title {
-  text-align: center;
   font-weight: 700;
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: white;
+  text-align: center;
+  color: black;
   margin: 0;
   a {
     text-decoration: none;
@@ -75,7 +76,7 @@ body {
 
 .todo_list_sub_title {
   margin: 0 0 3em 0;
-  text-align: center;
+  text-align: left;
   font-size: 0.9em;
   color: white;
   font-weight: 100;
@@ -91,38 +92,42 @@ body {
 
 #todo_items_wrapper {
   .row {
-    width: 100%;
+    width: 60%;
     border-top: 1px solid rgba(250,250,250, .3);
     border-bottom: 1px solid rgba(250,250,250, .3);
     .complete {
       width: 10%;
-      float: left;
-      text-align: center;
-      border-right: 1px solid rgba(250,250,250, .3);
+      text-align: left;
+      border-right: 1px solid black;
       padding: 1em 0;
+      margin-left: auto;
+      margin-right: auto;
     }
     .todo_item {
-      width: 80%;
-      float: left;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
       p {
         margin: 0;
         padding: 1em;
         color: $dark;
         font-weight: 100;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     .trash {
       width: 10%;
       float: left;
       text-align: center;
-      border-left: 1px solid rgba(250,250,250, .3);
+      border-left: 1px black;
       padding: 1em 0;
     }
     i {
-      color: white;
+      color: black;
       transition: all .4s ease-in-out;
       &:hover {
-        color: $dark;
+        color: black;
       }
     }
   }
@@ -130,8 +135,8 @@ body {
     margin-top: 2em;
     padding: 0 5%;
     input[type="text"] {
-      width: 72%;
-      margin-right: 2%;
+      width: 60%;
+      text-align: center;
       display: inline-block;
       outline: none;
       background: rgba(250,250,250,.4);
@@ -140,7 +145,7 @@ body {
       border-radius: 4px;
       padding: 1em 2em;
     }
-    input[type="submit"] {
+    /*input[type="submit"] {
       background: rgba(250,250,250,.4);
       outline: none;
       border: none;
@@ -153,7 +158,7 @@ body {
       &:hover {
         background: $dark;
       }
-    }
+    }*/
     ::-webkit-input-placeholder { color: $dark; }
   }
 }
@@ -173,10 +178,10 @@ body {
   padding: 0 5%;
 }
 label {
-  color: $dark;
+  color: black;
 }
 input[type="text"], textarea {
-  width: 100%;
+  width: 60%;
   margin: .5em 2% 1em 0;
   display: inline-block;
   outline: none;
@@ -190,24 +195,60 @@ textarea {
   height: 200px;
 }
 input[type="submit"] {
-  background: white;
-  outline: none;
-  border: none;
-  height: 40px;
-  border-radius: 4px;
-  width: 25%;
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
   display: inline-block;
-  transition: all .4s ease-in-out;
-  cursor: pointer;
-  color: $dark;
-  &:hover {
-    background: $dark;
-    color: white;
-  }
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  padding: 0.7em 1em;
+  margin: 0 10px 0px 10px;
+  display: inline;
+  float: right;
 }
+
 ::-webkit-input-placeholder { color: $dark; }
 
-
+.sign-in button {
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  background-color: black;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  padding: 0.7em 1em;
+  margin: 0 10px 0px 10px;
+  display: inline;
+  float: right;
+}
 
 
 .progress-bar {
@@ -232,7 +273,7 @@ input[type="submit"] {
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;
-  width: 100%;
+  width: 60%;
 
   > span.meter {
     @include animation(progress $progress-animation-duration linear infinite);
@@ -343,7 +384,10 @@ $success-color: #e6efc2 !default;
   @include flash($success-color);
 }
 
-button {
+.forms {
+  text-align: center;
+}
+/*button {
    @include button(flat, black);
     border-radius: 3px;
     border: 0;
@@ -355,4 +399,4 @@ button {
     margin: 0 10px 0px 10px;
     display: inline;
     float: center;
-}
+}*/

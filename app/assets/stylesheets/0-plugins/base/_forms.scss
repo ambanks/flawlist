@@ -30,7 +30,7 @@ label {
 select[multiple=multiple],
 textarea {
   background-color: $base-background-color;
-  border: $base-border;
+  border: none;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
@@ -40,6 +40,9 @@ textarea {
   padding: $base-spacing / 3;
   transition: border-color;
   width: 100%;
+  outline: none;
+  text-align: left;
+
 
   &:hover {
     border-color: darken($base-border-color, 10%);

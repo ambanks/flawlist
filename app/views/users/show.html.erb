@@ -20,17 +20,17 @@
     </br>
     </br>
 
-    <!-- <center> -->
-    
-    <%= link_to "Edit Profile", edit_user_path(@user), class: "link-button" %>
-    
-    <button> -->
-      <%= link_to "Goals", todo_lists_path(@user), class: "btn btn-default" %>
-     </button>
-     
-     <button>
-       <%= link_to "Sign Out", signout_path, method: "delete", class: "btn btn-default"%>
-     </button>
-	<!-- </center> -->
+    <center> 
+      <button>
+      <%= link_to "Edit Profile", edit_user_path(@user), class: "link-button" %>
+      </button>
+      <button>
+        <%= link_to "Goals", todo_lists_path(@user), class: "btn btn-default" %>
+       </button>
+       
+       <button>
+         <%= link_to "Sign Out", signout_path, method: "delete", class: "btn btn-default"%>
+       </button>
+	   </center>
 	</div>
 </div>

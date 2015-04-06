@@ -1,10 +1,10 @@
 .new_user {
 	margin: 100px auto;
   text-align: center;
-  color: $base-font-color;
+  color: black;
 }
     .form-control {
-      max-width: 30%;
+      max-width: 40%;
       margin-left: auto;
       margin-rigt: auto;
       display: block;
@@ -20,7 +20,7 @@
       float: center;
     }
 
-   button {
+/*   button {
    @include button(flat, black);
     border-radius: 3px;
     border: 0;
@@ -32,4 +32,4 @@
     margin: 0 10px 0px 10px;
     display: inline;
     float: center;
-}
+}*/
