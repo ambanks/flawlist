@@ -1,3 +1,4 @@
+
 body {
  	height: 100%;
   background: white;
@@ -44,7 +45,7 @@ body {
       margin: 5px;
       
       h1 {
-        font-size: 1.6em;
+        font-size: 2em;
         margin-bottom: 0.5em;
 
         @include media($large-screen) {
@@ -58,7 +59,7 @@ body {
         margin: 0 auto 3em auto; 
 
         @include media($large-screen) {
-          font-size: 1.1em;
+          font-size: 1.5em;
           max-width: 40%;
         }
       }
@@ -83,13 +84,14 @@ $parallax-background-height: $parallax-window-height;
   font-size: 5em;
   font-weight: bold;
   width: 100%;
-  height: 1000px;
+  height: 800px;
+  margin: 0;
 }
 
 .parallax-static-content {
   color: #f4c0d7;
   font-family:'Oswald', sans-serif;
-  padding: 8em 0;
+  padding: 7em 0;
   position: relative;
   z-index: 9;
 }

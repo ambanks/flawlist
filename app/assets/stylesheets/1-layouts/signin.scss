@@ -22,9 +22,16 @@
       color: $base-font-color;
     }
 
-    .sign-in button {
-      @include button(flat, black);
-      padding: 0.7em 1em;
+   /* button {
+     @include button(flat, black);
+      border-radius: 3px;
+      border: 0;
+      color: white;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      text-decoration: none;
       margin: 0 10px 0px 10px;
+      display: inline;
       float: center;
-    }
+    }*/

@@ -2,59 +2,62 @@
 <html>
 <head>
   <title>FlawlistApp</title>
-  <%= stylesheet_link_tag    'application', 'home', :cache => true %>
+  <%= stylesheet_link_tag    'application', :cache => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-<div class="container">
-  <div class="sign-in button">
-    <button><a href="/signin">Sign In</a></button>
+  <div id="container">
+    <div id="left">
+      <button type="button" class="js-menu-trigger sliding-panel-button">
+        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
+      </button>
+      <nav class="js-menu sliding-panel-content">
+        <ul>
+          <li><a href="javascript:void(0)">Profile</a></li>
+          <li><a href="javascript:void(0)">Goals</a></li>
+          <li><a href="javascript:void(0)">Motivation</a></li>
+        </ul>
+      </nav>
+      <div class="js-menu-screen sliding-panel-fade-screen"></div>
+    </div>
+    <div id="center">
+      <img src="/images/logo_flawlist_black.png">
+    </div>
+    <div id="right">
+      <div class="sign-in button">
+        <button><a href="/signin">Sign In</a></button>
+      </div>
+    </div>    
   </div>
-  <button type="button" class="js-menu-trigger sliding-panel-button">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
-  </button>
-  <div class="app-logo">
-    <img src="images/logo_flawlist_black.png">
-  </div>
-  <nav class="js-menu sliding-panel-content">
-    <ul>
-      <li><a href="javascript:void(0)">User Profile</a></li>
-      <li><a href="javascript:void(0)">Goals</a></li>
-      <li><a href="javascript:void(0)">Motivation</a></li>
-    </ul>
-  </nav>
-
-  <div class="js-menu-screen sliding-panel-fade-screen"></div>
-</div>
 
 <div class="container">
 	<%= yield %>
-
 </div>
-
 
 </body>
 <!--<div class="wrapper-for-content-outside-of-footer">
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
 </div>-->
-
+ <div class="footer-push">
+ </div>   
 <footer class="footer-2" role="contentinfo">
 <!--   <div class="footer-logo">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
   </div> -->
-    <ul>
+
+   <!--  <ul>
       <li><a href="javascript:void(0)">Profile</a></li>
       <li><a href="javascript:void(0)">Goals</a></li>
       <li><a href="javascript:void(0)">Motivation</a></li>
     </ul>
 
-    <div class="footer-secondary-links">
-      <ul>
+    <div class="footer-secondary-links"> -->
+     <!--  <ul>
         <li><a href="javascript:void(0)">Sign Up</a></li>
         <li><a href="javascript:void(0)">Sign In</a></li>
       </ul>
-
+ -->
       <!-- <ul class="footer-social">
         <li><a href="javascript:void(0)">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">

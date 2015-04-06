@@ -3,7 +3,7 @@
 
   <%= f.label :first_name %>
   <%= f.text_field :first_name, autofocus: true, class: "col-lg-1 control-label", class: "form-control"  %>
-
+ 
   <br>
   <%= f.label :last_name %>
   <%= f.text_field :last_name, autofocus: true, class: "col-lg-1 control-label", class: "form-control"  %>
@@ -19,8 +19,9 @@
  	<br>
  	<%= f.label :password_confirmation, "Confirm password" %>
  	<%= f.password_field	:password_confirmation, class: "col-lg-1 control-label", class: "form-control"  %>
-
+	
  	<br>
- 	<%= link_to "Back", :back, class: "btn btn-default" %><%= f.submit 'Save', class: "btn btn-default" %>
+  <%= f.submit 'Save', class: "btn btn-default" %>
+
 <% end %>
 

@@ -1,3 +1,33 @@
+$large-screen: em(860);
+
+#container {
+    position:relative;
+    height:100px;
+    width:100%;
+}
+
+#container div {
+    background: white;
+    width:200px;
+}
+
+#left {
+    position:absolute;
+    left:0px;
+    text-align: left;
+}
+#center {
+    position:absolute;
+    left:50%;
+    margin-left:-100px;
+    text-align: center;
+}
+#right {
+    position:absolute;
+    right:0px;
+    text-align: right;
+}
+
 //SLIDING PANEL
 .sliding-panel-content {  
   $action-color: #477DCA !default;
@@ -87,47 +117,42 @@
     float: right;
 }
 
+//LOGO
 .app-logo {
   padding: 10px 16px 10px 10px;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  left: 0; 
-  right: 0;
-  top: 0;
-  bottom: 0;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
+//Uncomment this for a sticky footer.
 
-// html, body {
-//  height: 100%;
-// }
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+ }
 
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
+html, body {
+  height: 100%;
+}
 
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
+.wrapper-for-content-outside-of-footer:after {
+  content: "";
+  display: block;
+}
 
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
+.footer-2, .wrapper-for-content-outside-of-footer:after {
+  height: 17em;
+
+  @include media($large-screen) {
+    height: 4em;
+  }
+}
 
 .footer-2 {
-  $base-spacing: 1.5em !default;
+  $base-spacing: 1em !default;
   $action-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
@@ -231,4 +256,8 @@
       }
     }
   }
+}
+
+.footer-push {
+  height: 50px;
 }
