@@ -1,25 +1,30 @@
 body {
  	height: 100%;
   background: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .hero {  
   $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
+  $action-color: white !default;
   $large-screen: em(860) !default;
-  $hero-background-top: #7F99BE; 
-  $hero-background-bottom: #20392B;
-  $hero-color: white;
+  $hero-background-top: white; 
+  $hero-background-bottom: white;
+  $hero-color: black;
   $gradient-angle: 10deg;
-  $hero-image: 'http://data2.whicdn.com/images/94700628/large.jpg';
+  $hero-image: 'http://i2.wp.com/medialodestar.com/wp-content/uploads/2014/08/beyonce-visual-album-preview.jpg?resize=820%2C546';
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #324766;
+  .hero-image img {
+  	height: .5em;
+  	margin-bottom: 1em;
+  }
+
+  @include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color: black;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 10em;
+  padding-bottom: 2em;
 
   .hero-logo img {
     height: 4em;
@@ -36,6 +41,7 @@ body {
 
     .hero-copy {
       text-align: center;
+      margin: 5px;
       
       h1 {
         font-size: 1.6em;
@@ -65,3 +71,40 @@ body {
     }
   }
 }
+
+$parallax-window-height: 1000px;
+$parallax-background-height: $parallax-window-height;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  width: 100%;
+  height: 1000px;
+}
+
+.parallax-static-content {
+  color: #f4c0d7;
+  font-family:'Oswald', sans-serif;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
+}
+
+.parallax-background {
+  background: url("http://i2.wp.com/medialodestar.com/wp-content/uploads/2014/08/beyonce-visual-album-preview.jpg?resize=820%2C546") repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 4;
+  width: 100%;
+}
+
+// Based on http://codepen.io/skeurentjes/
+

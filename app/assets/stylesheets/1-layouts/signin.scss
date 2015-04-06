@@ -1,0 +1,30 @@
+.signin-form {
+	margin: 100px auto;
+  width: 100px;
+  text-align: center;
+  color: $base-font-color;;
+}
+
+  .signin-user {
+      text-align: center;
+      font-family: $base-font-family;
+      color: $base-font-color;
+      margin-bottom: 2em;
+    }
+
+    .form-control {
+      max-width: 30%;
+      margin-left: auto;
+      margin-rigt: auto;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 2em;
+      color: $base-font-color;
+    }
+
+    .sign-in button {
+      @include button(flat, black);
+      padding: 0.7em 1em;
+      margin: 0 10px 0px 10px;
+      float: center;
+    }
