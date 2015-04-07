@@ -15,4 +15,7 @@ Rails.application.config.assets.precompile += %w( users.scss )
 Rails.application.config.assets.precompile += %w( signin.scss )
 Rails.application.config.assets.precompile += %w( signup.scss )
 Rails.application.config.assets.precompile += %w( todo_items.scss )
+Rails.application.config.assets.precompile += %w( todo_lists.scss )
+Rails.application.config.assets.precompile += %w( users.scss )
 Rails.application.config.assets.precompile += %w( jquery_ujs.js )
+Rails.application.config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif]

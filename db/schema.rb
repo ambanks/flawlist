@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150407083859) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "quotes", force: :cascade do |t|
     t.text     "quote"
     t.datetime "created_at", null: false
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150407083859) do
     t.text     "notes"
   end
 
-  add_index "todo_items", ["todo_list_id"], name: "index_todo_items_on_todo_list_id"
+  add_index "todo_items", ["todo_list_id"], name: "index_todo_items_on_todo_list_id", using: :btree
 
   create_table "todo_lists", force: :cascade do |t|
     t.string   "title"
@@ -49,4 +52,5 @@ ActiveRecord::Schema.define(version: 20150407083859) do
     t.boolean  "admin"
   end
 
+  add_foreign_key "todo_items", "todo_lists"
 end
