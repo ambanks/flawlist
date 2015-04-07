@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's difficult to change a flaw. Psycologists say that it takes 28 days of consistent behavior to change a habit. 
+How can you effectively track and reinforce a 28-day change and become flawless like Beyonce?  With this app, users can 
+set a goal, tasks in order to complete that goal, and keep track of their goal with a progress bar.  
 
-Things you may want to cover:
+Technology 
 
-* Ruby version
+* Ruby version 4.2
+* PostgreSQL
+* Sass 
+* Bourbon 
 
-* System dependencies
+Future Direction: 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* progress bar will update as tasks are added or deleted
+* as users meet milestones throught their goal, they will get closer to "Queen Bee" status
+* additional motivation features will include: 
+  * additional quotes and song lyrics 
+  * gifs
+  * music videos
+  * What is Beyonce doing now? (with her instagram feed)
+  * WWBD? (What would Beyonce do?)
+  * more dynamic Motivations page 
