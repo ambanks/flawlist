@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 
 	def motivation
 		@active = 'motivation'
+		@motivation_quote = Quote.motivation_quotes.shuffle
 	end
 
 end

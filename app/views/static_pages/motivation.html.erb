@@ -4,7 +4,22 @@
   </center>
 <div class="modal">
   <label for="modal-1">
-    <div class="modal-trigger">Click for Modal</div>
+    <div class="modal-trigger">QUOTES</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1>MOTIVATIONAL QUOTES</h1>
+      <p class="modal-content">
+        <%= @motivation_quote.first['quote'] %>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="modal">
+  <label for="modal-1">
+    <div class="modal-trigger">GIFS</div>
   </label>
   <input class="modal-state" id="modal-1" type="checkbox" />
   <div class="modal-fade-screen">
