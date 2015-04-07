@@ -22,3 +22,6 @@ Future Direction:
   * What is Beyonce doing now? (with her instagram feed)
   * WWBD? (What would Beyonce do?)
   * more dynamic Motivations page 
+
+https://flawlistapp.herokuapp.com/
+https://moqups.com/angel08/taHNOi6K
