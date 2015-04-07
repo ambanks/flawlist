@@ -36,10 +36,10 @@ textarea {
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  margin-bottom: $base-spacing / 2;
+  margin: 0 auto;
   padding: $base-spacing / 3;
   transition: border-color;
-  width: 100%;
+  width: 40%;
   outline: none;
   text-align: left;
 

@@ -10,25 +10,16 @@
   <div class="modal-fade-screen">
     <div class="modal-inner">
       <label class="modal-close" for="modal-1"></label>
-      <h1>MOTIVATIONAL QUOTES</h1>
-      <p class="modal-content">
+<!--       <h1>MOTIVATIONAL QUOTES</h1> -->
+      <p class="modal-intro">
         <%= @motivation_quote.first['quote'] %>
       </p>
     </div>
   </div>
 </div>
-<div class="modal">
-  <label for="modal-1">
-    <div class="modal-trigger">GIFS</div>
-  </label>
-  <input class="modal-state" id="modal-1" type="checkbox" />
-  <div class="modal-fade-screen">
-    <div class="modal-inner">
-      <label class="modal-close" for="modal-1"></label>
-      <h1>Modal Title</h1>
-      <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-      <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
-    </div>
-  </div>
-</div>
+<!-- <iframe src="//giphy.com/embed/I6gRKWg7phEly" width="480" height="421" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><iframe src="//giphy.com/embed/fPKavkCyl9vOw" width="480" height="228" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><iframe src="//giphy.com/embed/SHlDG8YSEnBmg" width="480" height="421" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> -->
+<div class="links">
+  <button>
+  <%= link_to 'Back', todo_lists_path %>
+  </button>
 </div>

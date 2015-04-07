@@ -5,29 +5,21 @@
 $white_opaque: rgba(250, 250, 250, .3);
 $dark: #1F7972;
 
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
-  background: -webkit-linear-gradient(40deg, #bfbfbf 10%, #e5e5e5 100%);
-  background:    -moz-linear-gradient(40deg, #bfbfbf 10%, #e5e5e5 100%);
-  background:     -ms-linear-gradient(40deg, #bfbfbf 10%, #e5e5e5 100%);
-  background:      -o-linear-gradient(40deg, #bfbfbf 10%, #e5e5e5 100%);
-  background:         linear-gradient(40deg, #bfbfbf 10%, #e5e5e5 100%);
-  font-family: 'Lato', sans-serif;
 }
 
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
-}
-
-.text-center {
-  text-align: center;
-  font-size: 2em;
-}
-
-.goals-center {
-  text-align: center;
 }
 
 .clearfix:after {
@@ -37,36 +29,31 @@ body {
 #notice {
   text-align: center;
   font-size: 1em;
-  color: black;
-  font-weight: strong;
+  color: #f4c0d7;
+  font-weight: 100;
 }
 
-.container-fluid {
-  width: 70%;
+.todo_container {
+  width: 50%;
   max-width: 750px;
-  background: #cccccc;
+  background: $white_opaque;
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
   padding: 1em 0;
-  background: -webkit-linear-gradient(40deg, #f4c0d7 10%, #e5e5e5 100%);
-  background:    -moz-linear-gradient(40deg, #f4c0d7 10%, #e5e5e5 100%);
-  background:     -ms-linear-gradient(40deg, #f4c0d7 10%, #e5e5e5 100%);
-  background:      -o-linear-gradient(40deg, #f4c0d7 10%, #e5e5e5 100%);
-  background:         linear-gradient(40deg, #f4c0d7 10%, #e5e5e5 100%);
 }
 
 .todo_list_title {
+  text-align: center;
   font-weight: 700;
   font-size: 2.5rem;
   text-transform: uppercase;
-  text-align: center;
   color: black;
   margin: 0;
   a {
     text-decoration: none;
-    color: white;
+    color: gray;
     transition: all .4s ease-in-out;
     &:hover {
       opacity: 0.4;
@@ -76,9 +63,9 @@ body {
 
 .todo_list_sub_title {
   margin: 0 0 3em 0;
-  text-align: left;
-  font-size: 0.9em;
-  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  color: black;
   font-weight: 100;
 }
 
@@ -92,42 +79,38 @@ body {
 
 #todo_items_wrapper {
   .row {
-    width: 60%;
+    width: 100%;
     border-top: 1px solid rgba(250,250,250, .3);
     border-bottom: 1px solid rgba(250,250,250, .3);
     .complete {
       width: 10%;
-      text-align: left;
-      border-right: 1px solid black;
+      float: left;
+      text-align: center;
+      border-right: 1px solid rgba(250,250,250, .3);
       padding: 1em 0;
-      margin-left: auto;
-      margin-right: auto;
     }
     .todo_item {
-      width: 60%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 80%;
+      float: left;
       p {
         margin: 0;
         padding: 1em;
-        color: $dark;
+        color: gray;
         font-weight: 100;
-        margin-left: auto;
-        margin-right: auto;
       }
     }
     .trash {
       width: 10%;
       float: left;
       text-align: center;
-      border-left: 1px black;
+      border-left: 1px solid rgba(250,250,250, .3);
       padding: 1em 0;
     }
     i {
-      color: black;
+      color: gray;
       transition: all .4s ease-in-out;
       &:hover {
-        color: black;
+        color: #f4c0d7;
       }
     }
   }
@@ -135,8 +118,8 @@ body {
     margin-top: 2em;
     padding: 0 5%;
     input[type="text"] {
-      width: 60%;
-      text-align: center;
+      width: 65%;
+      margin-right: 2%;
       display: inline-block;
       outline: none;
       background: rgba(250,250,250,.4);
@@ -144,28 +127,35 @@ body {
       height: 40px;
       border-radius: 4px;
       padding: 1em 2em;
+      margin: 0 10px 0 20px;
     }
-    /*input[type="submit"] {
-      background: rgba(250,250,250,.4);
+
+    input[type="submit"] {
+      background: black;
       outline: none;
       border: none;
       height: 40px;
+      font-size: inherit;
+      font-weight: bold;
       border-radius: 4px;
+      text-decoration: none;
+      margin: 0 10px 0px 10px;
       width: 25%;
       display: inline-block;
       transition: all .4s ease-in-out;
       cursor: pointer;
       &:hover {
-        background: $dark;
+        background: #f4c0d7;
       }
-    }*/
-    ::-webkit-input-placeholder { color: $dark; }
+    }
+
+    ::-webkit-input-placeholder { color: gray; }
   }
 }
 
 .links {
   display: block;
-  margin: 1.5em auto 0 auto;
+  margin: 3em auto 0 auto;
   text-align: center;
   font-size: 0.8em;
   color: white;
@@ -178,10 +168,11 @@ body {
   padding: 0 5%;
 }
 label {
-  color: black;
+  padding: 1em;
+  color: gray;
 }
 input[type="text"], textarea {
-  width: 60%;
+  width: 100%;
   margin: .5em 2% 1em 0;
   display: inline-block;
   outline: none;
@@ -194,62 +185,24 @@ input[type="text"], textarea {
 textarea {
   height: 200px;
 }
-input[type="submit"] {
-  background-color: black;
-  border-radius: 3px;
-  border: 0;
-  color: white;
+/*input[type="submit"] {
+  background: black;
+  outline: none;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 25%;
   display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  padding: 7px 18px;
-  text-decoration: none;
-  background-clip: padding-box;
-  background-color: black;
-  border-radius: 3px;
-  border: 0;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
   color: white;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  padding: 7px 18px;
-  text-decoration: none;
-  background-clip: padding-box;
-  padding: 0.7em 1em;
-  margin: 0 10px 0px 10px;
-  display: inline;
-  float: right;
-}
-
-::-webkit-input-placeholder { color: $dark; }
-
-.sign-in button {
-  background-color: black;
-  border-radius: 3px;
-  border: 0;
-  color: white;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  padding: 7px 18px;
-  text-decoration: none;
-  background-clip: padding-box;
-  background-color: black;
-  border-radius: 3px;
-  border: 0;
-  color: white;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  padding: 7px 18px;
-  text-decoration: none;
-  background-clip: padding-box;
-  padding: 0.7em 1em;
-  margin: 0 10px 0px 10px;
-  display: inline;
-  float: right;
-}
-
+  &:hover {
+    background: white;
+    color: white;
+  }
+}*/
+::-webkit-input-placeholder { color: black; }
 
 .progress-bar {
   $base-border-color: gainsboro !default;
@@ -273,7 +226,7 @@ input[type="submit"] {
   height: $progress-height;
   margin: 0 auto;
   padding: 2px;
-  width: 60%;
+  width: 80%;
 
   > span.meter {
     @include animation(progress $progress-animation-duration linear infinite);
@@ -387,16 +340,49 @@ $success-color: #e6efc2 !default;
 .forms {
   text-align: center;
 }
-/*button {
-   @include button(flat, black);
-    border-radius: 3px;
-    border: 0;
-    color: white;
-    display: inline-block;
-    font-size: inherit;
-    font-weight: bold;
+
+.text-center {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+
+.goals-center {
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+}
+
+.goals-list {
+  text-align: center;
+  a {
+    color: gray;
     text-decoration: none;
-    margin: 0 10px 0px 10px;
-    display: inline;
-    float: center;
-}*/
+    transition: color 0.1s linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+    color: #f4c0d7;
+    }
+  }
+}
+
+.motivation-button {
+  text-align: center;
+  color: white;
+  &:hover {
+    background: white;
+    color: white;
+  }
+}
+
+.edit_user {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.form-control {
+  text-align: left;
+  margin: 0 auto;
+}

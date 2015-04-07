@@ -13,25 +13,11 @@
     }
 
     .form-control {
-      max-width: 30%;
-      margin-left: auto;
-      margin-rigt: auto;
+      max-width: 40%;
       display: block;
-      margin: 0 auto;
+      margin-left: 0px;
       margin-bottom: 2em;
       color: $base-font-color;
     }
-/*
-    button {
-     @include button(flat, black);
-      border-radius: 3px;
-      border: 0;
-      color: white;
-      display: inline-block;
-      font-size: inherit;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 0 10px 0px 10px;
-      display: inline;
-      float: center;
-    }*/
+
+  
